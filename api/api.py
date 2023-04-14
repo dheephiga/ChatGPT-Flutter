@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/api',methods = ['GET'])
 
 def prompt():
-    openai.organization = "org-ZXcHtZdKXkkDyteIy4BtYQCp"
-    api_key = "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"
+    openai.organization = "ENTER YOUR ORG ID"
+    api_key = "ENTER YOUR API KEY"
     openai.api_key = api_key
     d = {}
     get_prompt = str(request.args['query'])
