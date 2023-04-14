@@ -32,18 +32,18 @@ class _HomeState extends State<Home> {
             TextButton(
                 onPressed: () async {
                   data = await fetchdata(url);
-                  var decoded = jsonDecode(data);
+                  var decoded =  await jsonDecode(data);
                   setState(() {
                     output = decoded['output'];
                   });
                 },
                 child: Text(
-                  'Fetch ASCII Value',
+                  'Get answer',
                   style: TextStyle(fontSize: 20),
                 )),
             Text(
               output,
-              style: TextStyle(fontSize: 40, color: Colors.green),
+              style: TextStyle(fontSize: 12, color: Colors.green),
             )
           ]),
         ),
